@@ -1,21 +1,24 @@
-#include <iostream>
 #include "Empregado.h"
-#define TAM 10 //Defina o numero de Funcionários
+#include <iostream>
+using namespace std; 
 
-int main() {
-	int i;
-	Empregado funcionario[TAM];
+Empregado::Empregado(){
+}
+void Empregado::salariomensal(){
+	cout << "Digite o nome do funcionario: ";
+	cin >> nome;
+	cout << "Digite o sobrenome do funcionario: ";
+	cin >> sobrenome;
+	cout << "Digite o salario do funcionario: ";
+	cin >> salario;
+	cout << "-----------------------------------------------------------" << endl;
+}
 
-	for(i=0; i<TAM; i++){
-		funcionario[i].salariomensal();	
-			if(funcionario[i].salario<0){
-			cout << "Salario invalido!";
-		return 0;
-			}
-	}
-	for(i=0; i<TAM; i++){
-		funcionario[i].salarioanualAU();
-	}
+void Empregado::salarioanualAU(){
+	cout << "O funcionario " << nome << " " << sobrenome << " recebe:"<< endl;
+	cout << "R$" << salario*12	<< " por ano."<< endl;
+	cout << "Com o aumento de 10%:\n" << "R$" << salario*1.2+salario*12 << endl;
+}
 
-	return 0;
+Empregado::~Empregado(){
 }
