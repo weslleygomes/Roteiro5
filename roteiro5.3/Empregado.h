@@ -1,4 +1,3 @@
-
 #ifndef EMPREGADO_H
 #define EMPREGADO_H
 #include <string>
