@@ -24,4 +24,4 @@ std::string Pagamento::getNomeDoFuncionario(){
 Pagamento::~Pagamento(){
 	
 }
-#include "Pagamento.h"
+
